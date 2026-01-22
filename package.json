@@ -1,0 +1,28 @@
+{
+  "name": "CAPS_LOCK-AUTOT",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@playwright/test": "^1.45.3",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^20.14.11",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "log4js": "^6.7.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^7.16.1"
+  },
+  "scripts": {
+    "tests:web": "./node_modules/.bin/env-cmd -f ./.env.vault npx playwright test --config=./configs/playwright.web.config.ts",
+    "lint": "npx eslint --quiet --ext ts,js .",
+    "prettier": "npx prettier . --write"
+  }
+}

@@ -1,0 +1,15 @@
+.vscode
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+.env.vault
+yarn.lock
+yarn-error.log
+./summary.json
+summary.json

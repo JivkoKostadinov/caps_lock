@@ -1,0 +1,28 @@
+{
+  "dashboardPage": {
+    "firstFormZipInput": "(//input[@name=\"zipCode\"])[1]",
+    "firstFormZipNextBtn": "(//button[contains(normalize-space(.), 'Next')])[2]",
+    "firstFormIndependenceTub": "(//label[contains(normalize-space(.), 'Independence')])[1]",
+    "firstFormSafetyTub": "(//label[contains(normalize-space(.), 'Safety')])[1]",
+    "firstFormTherapyTub": "(//label[contains(normalize-space(.), 'Therapy')])[1]",
+    "firstFormOtherTub": "(//label[contains(normalize-space(.), 'Other')])[1]",
+    "firstFormWalkInTubNextBtn": "(//button[contains(normalize-space(.), 'Next')])[3]",
+    "firstFormHouseCondoTub": "(//label[contains(normalize-space(.), 'House / Condo')])[1]",
+    "firstFormRentalPropertyTub": "(//label[contains(normalize-space(.), 'Rental Property')])[1]",
+    "firstFormMobileHomeTub": "(//label[contains(normalize-space(.), 'Mobile Home')])[1]",
+    "firstFormPropertyNextBtn": "(//button[contains(normalize-space(.), 'Next')])[4]",
+    "firstFormEstimateFormYourName": "(//input[@placeholder=\"Enter Your Name\"])[1]",
+    "firstFormEstimateFormEmail": "(//input[@placeholder=\"Enter Your Email\"])[1]",
+    "firstFormGoToEstimateBtn": "(//button[contains(normalize-space(.), 'Go To Estimate')])[1]",
+    "firstFormLasStepPhoneNumber": "(//input[@placeholder=\"(XXX)XXX-XXXX\"])[1]",
+    "firstFormSubmitRequestBtn": "(//button[contains(normalize-space(.), 'Submit Your Request')])[1]",
+    "futureInstallationRequestBtn": "(//button[@type=\"submit\"])[6]",
+    "futureRequestMessage": "(//div[contains(normalize-space(.), 'Thank you for your interest, we will contact you when our service becomes available in your area!')])[5]",
+    "futureRequestEmailForm": "(//input[@placeholder=\"Email Address\"])[1]",
+    "firstFormPropertyMenuErrMsg": "//div[text()='Choose one of the variants.']",
+    "firstFormPhoneNumberErrMsg": "//div[text()=\"Wrong phone number.\"]"
+  },
+  "thankYouPage": {
+    "formThankYouMessage": "//h1[contains(normalize-space(.), 'Thank you!')]"
+  }
+}
