@@ -59,20 +59,30 @@ Retry - retrying several times when a call to the app fails.
 
 ## Development
 
-`npm v10.5.0`
+`npm v10.5.0` or `yarn v1.22.22`
 
 `node v20.12.1`
 
-### Running Tests Locally
+### Code formatter and code Beautifier
 
-1. Run code formatter and code Beautifier
+1. Run code Beautifier
 
 ```sh
 yarn run prettier
 ```
+or
+```sh
+npm run prettier
+```
+
+2. Run code formatter
 
 ```sh
 yarn run lint
+```
+or
+```sh
+npm run lint
 ```
 
 ### Running Tests Locally
@@ -84,6 +94,10 @@ yarn run lint
 ```sh
 yarn
 ```
+or
+```sh
+npm i --save-dev
+```
 
 4. Run Web tests with:
 
@@ -91,4 +105,8 @@ Test are CI ready, running in headless mode. To enable GUI run, update CI=false 
 
 ```sh
 yarn run tests:web
+```
+or
+```sh
+npm run tests:web
 ```
