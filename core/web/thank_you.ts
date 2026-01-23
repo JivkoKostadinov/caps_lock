@@ -1,6 +1,6 @@
-import { Page } from "@playwright/test";
-import { Logger } from "log4js";
-import { DomActions } from "./dom_actions";
+import { Page } from '@playwright/test';
+import { Logger } from 'log4js';
+import { DomActions } from './dom_actions';
 
 export class ThankYouPage {
   logger: Logger;
@@ -21,6 +21,6 @@ export class ThankYouPage {
   }
 
   public async getHeaderTitle(): Promise<string> {
-    return await this.getElementText("formThankYouMessage");
+    return await this.getElementText('formThankYouMessage');
   }
 }

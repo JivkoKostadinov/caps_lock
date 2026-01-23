@@ -49,7 +49,6 @@ Retry - retrying several times when a call to the app fails.
          - dom_action - all comon actions performed over a page go here.
          The idea is not coupling the implementation with a specific page, elements, and page.
 
-
 `data` - UI element locators, static data
 
 `tests` - Web and API tests split by functionality
@@ -63,7 +62,6 @@ Retry - retrying several times when a call to the app fails.
 `npm v10.5.0`
 
 `node v20.12.1`
-
 
 ### Running Tests Locally
 

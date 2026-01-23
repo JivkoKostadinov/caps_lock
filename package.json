@@ -21,7 +21,7 @@
     "typescript-eslint": "^7.16.1"
   },
   "scripts": {
-    "tests:web": "./node_modules/.bin/env-cmd -f ./.env.vault npx playwright test --config=./configs/playwright.web.config.ts",
+    "tests:web": "npx env-cmd -f ./.env.vault  playwright test --config=./configs/playwright.web.config.ts",
     "lint": "npx eslint --quiet --ext ts,js .",
     "prettier": "npx prettier . --write"
   }
