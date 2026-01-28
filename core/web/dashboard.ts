@@ -61,18 +61,8 @@ export class DashboardPage {
 
   public async zipForm(zipCode: string): Promise<void> {
     this.logger.info(`Updating zip form with ${zipCode}`);
-    // await this.fillElement('firstFormZipInput', zipCode);
-    // await this.getElementAndClick('firstFormZipNextBtn');
-    await this.page
-    .getByPlaceholder('Enter ZIP Code')
-    .first()
-    .fill(zipCode);
-
-   await this.page
-  .getByRole('button', { name: /next/i })
-  .first()
-  .click();
-
+    await this.fillElement('firstFormZipInput', zipCode);
+    await this.getElementAndClick('firstFormZipNextBtn');
     await this.waitForLoadState();
   }
 
