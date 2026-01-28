@@ -1,6 +1,5 @@
 // @ts-check
-/* eslint-disable */
-const { defineConfig, devices } = require('@playwright/test');
+import { defineConfig, devices } from '@playwright/test';
 import baseConfig from './playwright.default.config.ts';
 
 export default defineConfig({

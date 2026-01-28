@@ -1,8 +1,11 @@
 // @ts-check
-/* eslint-disable */
-const { defineConfig } = require('@playwright/test');
+import { defineConfig } from '@playwright/test';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // parse all lines from the env file like key=value and merge it to process.env
 const envFile = process.env.ENV_FILE || '.env.vault';
@@ -31,11 +34,13 @@ export default defineConfig({
   testMatch: /.*\.ts/,
   reporter: 'line',
   fullyParallel: true,
-  actionTimeout: 50000,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 3 : 0,
   workers: process.env.CI ? 1 : undefined,
   testDir: '../tests/',
+  use: {
+    actionTimeout: 50000,
+  },
   expect: {
     timeout: 20000,
   },

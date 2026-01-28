@@ -1,15 +1,40 @@
-.vscode
+# Dependencies
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+
+# Build output
+dist/
+build/
+
+# Test results
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Environment files
+.env
+.env.*
 .env.vault
-yarn.lock
+
+# Logs
+*.log
 yarn-error.log
-./summary.json
+npm-debug.log*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test output
 summary.json
+coverage/

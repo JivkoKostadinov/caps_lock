@@ -13,14 +13,14 @@ export class ThankYouPage {
   }
 
   private async getElementText(element: string): Promise<string> {
-    return await DomActions.getElementText(element);
+    return DomActions.getElementText(element);
   }
 
-  public async getCurrentUrl(): Promise<string> {
-    return await DomActions.getCurrentURL();
+  public getCurrentUrl(): string {
+    return DomActions.getCurrentURL();
   }
 
   public async getHeaderTitle(): Promise<string> {
-    return await this.getElementText('formThankYouMessage');
+    return this.getElementText('formThankYouMessage');
   }
 }

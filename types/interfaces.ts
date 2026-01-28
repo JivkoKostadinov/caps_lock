@@ -1,6 +1,6 @@
 export interface WalkInBathTestData {
   zip: string;
-  interetsedTub: string;
+  interestedTub: string;
   tubForProperty: string;
   name: string;
   email: string;

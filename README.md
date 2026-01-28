@@ -70,7 +70,9 @@ Retry - retrying several times when a call to the app fails.
 ```sh
 yarn run prettier
 ```
+
 or
+
 ```sh
 npm run prettier
 ```
@@ -80,7 +82,9 @@ npm run prettier
 ```sh
 yarn run lint
 ```
+
 or
+
 ```sh
 npm run lint
 ```
@@ -94,7 +98,9 @@ npm run lint
 ```sh
 yarn
 ```
+
 or
+
 ```sh
 npm i --save-dev
 ```
@@ -106,7 +112,9 @@ Test are CI ready, running in headless mode. To enable GUI run, update CI=false 
 ```sh
 yarn run tests:web
 ```
+
 or
+
 ```sh
 npm run tests:web
 ```

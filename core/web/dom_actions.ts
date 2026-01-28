@@ -16,11 +16,7 @@ export abstract class DomActions {
     this.logger.info(`Get ${element}`);
 
     const get_locator = loadLocator(this.uiElements, element);
-    await this.page.waitForSelector(get_locator);
-    const locator = await this.page.locator(get_locator);
-    await locator.waitFor();
-
-    return locator;
+    return this.page.locator(get_locator);
   }
 
   public static async fillElement(locator: string, text: string): Promise<void> {
@@ -33,9 +29,7 @@ export abstract class DomActions {
     this.logger.info(`Get multiple ${elements}`);
 
     const locator = loadLocator(this.uiElements, elements);
-    await this.page.waitForSelector(locator);
-
-    return await this.page.locator(locator).all();
+    return this.page.locator(locator).all();
   }
 
   public static async getElementText(element: string): Promise<string> {
@@ -61,7 +55,7 @@ export abstract class DomActions {
     return toReturn;
   }
 
-  public static async waitForLaodState(): Promise<void> {
+  public static async waitForLoadState(): Promise<void> {
     this.logger.info('Waiting page the be fully loaded');
     return this.page.waitForLoadState();
   }
@@ -69,19 +63,14 @@ export abstract class DomActions {
   public static async getElementFromElements(elements: string, place: number): Promise<Locator> {
     this.logger.info(`Get ${place} element from elements ${elements}`);
     const get_locators = loadLocator(this.uiElements, elements);
-    const locator = await this.page.locator(get_locators).nth(place);
-    await locator.waitFor();
-
-    return locator;
+    return this.page.locator(get_locators).nth(place);
   }
 
   public static async hoverElement(element: string): Promise<void> {
     this.logger.info(`Hover element ${element}`);
 
     const get_locator = loadLocator(this.uiElements, element);
-    const locator = await this.page.locator(get_locator);
-    await locator.hover();
-    await locator.waitFor({ state: 'visible' });
+    await this.page.locator(get_locator).hover();
   }
 
   public static async getElementLocatorAsString(element: string): Promise<string> {
@@ -89,7 +78,7 @@ export abstract class DomActions {
     return get_locator;
   }
 
-  public static async getCurrentURL(): Promise<string> {
+  public static getCurrentURL(): string {
     const url = this.page.url();
     return url;
   }
